@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import { View, StyleSheet, Text } from "react-native";
+import {ThemeContext} from "./ThemeContext";
 
 export default function Stats (){
+    const {theme} = useContext(ThemeContext)
     return(
-        <View style={styles.container}>
-            <Text style={styles.text}>Statistics Screen</Text>
+        <View style={[styles.container,{ backgroundColor: theme ? '#030030' : '#fff' }]}>
+            <Text style={[styles.text, {color: theme? '#fff': '#000'}]}>My Statistics Screen</Text>
         </View>
     )
 
@@ -16,6 +18,11 @@ export default function Stats (){
 const styles= StyleSheet.create({
     container:{
         alignContent: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center',
+
+
+        flexDirection: 'column',
+        flex: 1,
     }
 })

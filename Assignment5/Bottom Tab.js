@@ -21,6 +21,9 @@ export default function Tabs(){
             screenOptions={({route})=>({
                 headerShown:  route.name==='Home'? false : true,
                 headerTitleAlign: 'center',
+                headerTitleStyle: {color: theme? '#fff': '#000'},
+                headerStyle:{ backgroundColor: theme ? '#030030' : '#fff' },
+            
                 tabBarIcon: ({focused, color, size})=> {
                     let iconName;
                     if (route.name ==='Home'){
@@ -36,12 +39,23 @@ export default function Tabs(){
                     return<Image source= {iconName} style={{width: size, height: size, tintColor: color}}/>
                 },
                 tabBarActiveTintColor: '#0062FF',
-                tabBarInactiveTintColor: '#000',
+                tabBarInactiveTintColor: theme? '#fff': '#000',
                 tabBarStyle:{
                     
                     borderWidth: 0,
-                    borderColor: '#fff'
+                    // borderT
+                    borderColor: theme ? '#030030' : '#fff',
+                    backgroundColor: theme ? '#030030' : '#fff',
+                    height: 70, // Increase height of the tab bar
+                    paddingBottom: 10,
+                    
 
+                },
+                tabBarIconStyle: {
+                    size: 60, 
+                },
+                tabBarLabelStyle: {
+                    fontSize: 14, 
                 }
                 
             })}

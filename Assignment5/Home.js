@@ -49,8 +49,8 @@ export default function Home() {
             <Text style={[styles.Name,{color: theme? '#fff': '#000'}]}>Eric Atsu</Text>
           </View>
         </View>
-        <View style={styles.searchCont}>
-          <Image source={require("./assets/search.png")} style={styles.search} />
+        <View style={[styles.searchCont,{backgroundColor: theme ?'#1d1c39':'#f1f1f4' }]}>
+          <Image source={require("./assets/search.png")} style={[styles.search, {tintColor: theme ? '#fff' : '#000'}]} />
         </View>
       </View>
 
@@ -58,26 +58,26 @@ export default function Home() {
 
       <View style={styles.actions}>
         <View style={styles.sentCont}>
-          <View style={styles.actionImg}>
-            <Image source={require("./assets/arrow-up.png")} style={styles.actionpic} />
+          <View style={[styles.actionImg,{backgroundColor: theme ?'#1d1c39':'#f1f1f4' }]}>
+            <Image source={require("./assets/arrow-up.png")} style={[styles.actionpic, {tintColor: theme ? '#fff' : '#000'}]} />
           </View>
             <Text style={[styles.actionWord,{color: theme? '#fff': '#000'}]}>Sent</Text>
         </View>
         <View style={styles.sentCont}>
-          <View style={styles.actionImg}>
-            <Image source={require("./assets/arrow-down.png")} style={styles.actionpic} />
+          <View style={[styles.actionImg, {backgroundColor: theme ?'#1d1c39':'#f1f1f4' }]}>
+            <Image source={require("./assets/arrow-down.png")} style={[styles.actionpic, {tintColor: theme ? '#fff' : '#000'}]} />
           </View>
           <Text style={[styles.actionWord, {color: theme? '#fff': '#000'}]}>Receive</Text>
         </View>
         <View style={styles.sentCont}>
-          <View style={styles.actionImg}>
-            <Image source={require("./assets/coin.png")} style={styles.actionpic} />
+          <View style={[styles.actionImg, {backgroundColor: theme ?'#1d1c39':'#f1f1f4' }]}>
+            <Image source={require("./assets/coin.png")} style={[styles.actionpic, {tintColor: theme ? '#fff' : '#000'}, ]} />
           </View>
           <Text style={[styles.actionWord,{color: theme? '#fff': '#000'}]}>Loan</Text>
         </View>
         <View style={styles.sentCont}>
-          <View style={styles.actionImg}>
-            <Image source={require("./assets/upload.png")} style={styles.actionpic} />
+          <View style={[styles.actionImg,{backgroundColor: theme ?'#1d1c39':'#f1f1f4' }]}>
+            <Image source={require("./assets/upload.png")} style={[styles.actionpic, {tintColor: theme ? '#fff' : '#000'}]} />
           </View>
           <Text style={[styles.actionWord,{color: theme? '#fff': '#000'}]}>Topup</Text>
         </View>
